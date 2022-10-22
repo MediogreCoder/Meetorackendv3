@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'; class App extends Component {
+import axios from 'axios';
+import Login from './Login';
+import Signup from './Signup';
+import Home from './Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -40,11 +43,11 @@ handleLogout = () => {
     return (
       <div>
          <BrowserRouter>
-          <Switch>
-            <Route exact path='/' component={}/>
-            <Route exact path='/login' component={}/>
-            <Route exact path='/signup' component={}/>
-          </Switch>
+          <Routes>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/login' component={Login}/>
+            <Route exact path='/signup' component={Signup}/>
+          </Routes>
         </BrowserRouter>
       </div>
     );

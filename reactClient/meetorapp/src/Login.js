@@ -20,7 +20,7 @@ handleChange = (event) => {
   };
   handleSubmit = (event) => {
     event.preventDefault()
-    const {username, email, password} = this.statelet user = {
+    const { username, email, password } = this.statelet; user = {
       username: username,
       email: email,
       password: password
@@ -56,7 +56,8 @@ handleErrors = () => {
   
   
 render() {
-    const {username, email, password} = this.statereturn (
+  const { username, email, password } = this.state
+  return (
       <div>
         <h1>Log In</h1>        
 <form onSubmit={this.handleSubmit}>
